@@ -1,109 +1,61 @@
-// const { createUser, var22, myFunc}  = require('./dir/file');
-// require('./dir/file');
-//
-// let userFunc = createUser ('Nadya', 'nadya.nik@gmail.com');
-//
-// console.log(userFunc);
-//
-// console.log(var22);
-// console.log('"___________"');
-//
-// myFunc();
-//
-// (() => {
-//    console.log('SELF FUNC')
-// })();
+const express = require('express');
+const expressHbs = require('express-handlebars');
+const path = require ('path');
 
-const fs = require ('fs');
+const users = [
+    {name: 'Vika', age: 18},
+    {name: 'Ihor', age: 24},
+    {name: 'Anya', age: 15},
+    {name: 'Olya', age: 28}
+]
 
-const filePath = __dirname + '/dir/dog2.txt';
-const filePath1 = __dirname + '/dir/file.js';
-const filePath2 = __dirname + '/dir/fileCopy.js';
-const filePathToDelete = __dirname + '/dir/ada.php';
-const filePathNew = __dirname + '/movies/hello.world';
-
-console.log(filePath);
+const app = express();
 
 
-// fs.writeFile(filePath, 'Hello world dec-2021', err => {
-//     if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//     }
+
+app.set('view engine', '.hbs');
+app.engine('.hbs', expressHbs({
+    defaultLayout: false
+}));
+app.set('views', path.join(__dirname, 'static'));
+
+app.use(express.json());
+
+
+app.get('/users', (req, res) => {
+    res.render('users', {name: 'Dina', users} )
+});
+
+// app.get('/', (req, res) => {
+//     // console.log(req);
+//     // res.write('hello world')
+//     res.end('hello chat')
 // })
 
-// fs.appendFile(filePath, 'Hi man \n', err => {
-//     if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//     }
-// })
-
-// fs.readFile(filePath, (err, data) => {
-//         if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________');
-//         return
-//     }
-//         console.log(data.toString())
-// })
-
-// fs.mkdir(`${__dirname}/movies/home`, {recursive: true},  (err) => {
-//     console.log(err);
-// })
-
-// fs.readdir(`${__dirname}/movies/home`, (err, files) => {
-//         if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//             return
-//     }
-//
-//         files.forEach(file => {
-//             fs.stat(`${__dirname}/movies/home/${file}`, (statErr, FileStats) => {
-//                 if (statErr) {
-//                     console.log('____________');
-//                     console.log(statErr);
-//                     console.log('____________')
-//                     return
-//                 }
-//                 console.log('****');
-//                 console.log(FileStats.isFile());
-//                 console.log('****');
-//             });
-//         })
-// })
-
-// fs.rmdir(`${__dirname}/movies/home`, {recursive:true}, err => {
-//     if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//         }
-// })
-
-// fs.unlink(filePathToDelete, err => {
-//         if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//         }
+// app.get('/ping', (req, res) => {
+//     res.end('pong');
 // });
+//
+//
+// app.post('/', (req, res) => {
+//     console.log(req.body);
+//     console.log(req.query);
+//     res.json('post');
+// });
+//
+// app.get('/users', ((req, res) => {
+//     res.json(users);
+// }));
+//
+// app.get('/users/:userId', ((req, res) => {
+//    const {userId} = req.params;
+//     res.json(users[userId]);
+// }))
+//
+// app.post('/honda', ((req, res) => {
+//     res.json('Honda');
+// }));
 
-// fs.rename(filePath2, filePathNew, err => {
-//             if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//         }
-// })
-
-const path = require('path');
-
-let s = path.join(__dirname, 'movies', 'xx', 'test', 'zz.mp4');
-
-console.log(s);
+app.listen(3000, () => {
+    console.log('App listen 3000');
+})
