@@ -1,8 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 
-// let dirBoys = path.join(__dirname, 'dec-2020', 'boys');
-// let dirGirls = path.join(__dirname, 'dec-2020', 'girls');
+let dirBoys = path.join(__dirname, 'dec-2020', 'boys');
+let dirGirls = path.join(__dirname, 'dec-2020', 'girls');
 //
 //
 // console.log(dirBoys);
