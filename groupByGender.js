@@ -40,7 +40,7 @@ function groupByGender() {
     //                         console.log(err1);
     //                     }
     //                 })
-    //             } else if(newFile.gender === 'female') {
+    //             } else {
     //                 fs.rename(`${__dirname}/dec-2020/18.00/${file}`, `${__dirname}/dec-2020/girls/${file}`, err1 => {
     //                     if (err1) {
     //                         console.log(err1);
@@ -74,7 +74,7 @@ function groupByGender() {
                             console.log(err1);
                         }
                     })
-                } else if(newFile.gender === 'female') {
+                } else {
                     fs.rename(`${__dirname}/dec-2020/20.00/${file}`, `${__dirname}/dec-2020/girls/${file}`, err1 => {
                         if (err1) {
                             console.log(err1);
