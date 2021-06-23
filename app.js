@@ -1,45 +1,33 @@
-// const { createUser, var22, myFunc}  = require('./dir/file');
-// require('./dir/file');
-//
-// let userFunc = createUser ('Nadya', 'nadya.nik@gmail.com');
-//
-// console.log(userFunc);
-//
-// console.log(var22);
-// console.log('"___________"');
-//
-// myFunc();
-//
-// (() => {
-//    console.log('SELF FUNC')
-// })();
+const switchStudents = require('./switchStudents');
+require('./switchStudents');
+const groupByGender = require('./groupByGender');
 
-const fs = require ('fs');
-
-const filePath = __dirname + '/dir/dog2.txt';
-const filePath1 = __dirname + '/dir/file.js';
-const filePath2 = __dirname + '/dir/fileCopy.js';
-const filePathToDelete = __dirname + '/dir/ada.php';
-const filePathNew = __dirname + '/movies/hello.world';
-
-console.log(filePath);
+switchStudents();
 
 
-// fs.writeFile(filePath, 'Hello world dec-2021', err => {
+// const fs = require ('fs');
+
+
+// fs.mkdir(`${__dirname}/dec-2020`, (err) => {
+//     console.log(err);
+// })
+
+// fs.mkdir(`${__dirname}/dec-2020/20.00`, {recursive: true},  (err) => {
+//     console.log(err);
+// })
+
+// fs.mkdir(`${__dirname}/dec-2020/18.00`, {recursive: true},  (err) => {
+//     console.log(err);
+// })
+
+// const filePath = __dirname + '/dec-2020/18.00/Student1.json';
+
+// fs.writeFile(filePath, 'Stud1', err => {
 //     if (err) {
-//         console.log('____________');
 //         console.log(err);
-//         console.log('____________')
 //     }
 // })
 
-// fs.appendFile(filePath, 'Hi man \n', err => {
-//     if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//     }
-// })
 
 // fs.readFile(filePath, (err, data) => {
 //         if (err) {
@@ -51,9 +39,7 @@ console.log(filePath);
 //         console.log(data.toString())
 // })
 
-// fs.mkdir(`${__dirname}/movies/home`, {recursive: true},  (err) => {
-//     console.log(err);
-// })
+
 
 // fs.readdir(`${__dirname}/movies/home`, (err, files) => {
 //         if (err) {
@@ -102,8 +88,8 @@ console.log(filePath);
 //         }
 // })
 
-const path = require('path');
-
-let s = path.join(__dirname, 'movies', 'xx', 'test', 'zz.mp4');
-
-console.log(s);
+// const path = require('path');
+//
+// let s = path.join(__dirname, 'movies', 'xx', 'test', 'zz.mp4');
+//
+// console.log(s);
