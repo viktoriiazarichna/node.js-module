@@ -1,7 +1,7 @@
-const switchStudents = require('./switchStudents');
+// const switchStudents = require('./switchStudents');
 const groupByGender = require('./groupByGender');
 
-switchStudents();
+// switchStudents();
 groupByGender();
 
 
@@ -20,9 +20,9 @@ groupByGender();
 //     console.log(err);
 // })
 
-// const filePath = __dirname + '/dec-2020/18.00/Student1.json';
+// const filePath = __dirname + '/dec-2020/20.00/Slava.json';
 
-// fs.writeFile(filePath, 'Stud1', err => {
+// fs.writeFile(filePath, 'Slava', err => {
 //     if (err) {
 //         console.log(err);
 //     }
