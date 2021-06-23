@@ -1,8 +1,8 @@
 const switchStudents = require('./switchStudents');
-require('./switchStudents');
 const groupByGender = require('./groupByGender');
 
 switchStudents();
+groupByGender();
 
 
 // const fs = require ('fs');
@@ -29,67 +29,10 @@ switchStudents();
 // })
 
 
-// fs.readFile(filePath, (err, data) => {
-//         if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________');
-//         return
-//     }
-//         console.log(data.toString())
-// })
 
 
 
-// fs.readdir(`${__dirname}/movies/home`, (err, files) => {
-//         if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//             return
-//     }
-//
-//         files.forEach(file => {
-//             fs.stat(`${__dirname}/movies/home/${file}`, (statErr, FileStats) => {
-//                 if (statErr) {
-//                     console.log('____________');
-//                     console.log(statErr);
-//                     console.log('____________')
-//                     return
-//                 }
-//                 console.log('****');
-//                 console.log(FileStats.isFile());
-//                 console.log('****');
-//             });
-//         })
-// })
 
-// fs.rmdir(`${__dirname}/movies/home`, {recursive:true}, err => {
-//     if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//         }
-// })
 
-// fs.unlink(filePathToDelete, err => {
-//         if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//         }
-// });
 
-// fs.rename(filePath2, filePathNew, err => {
-//             if (err) {
-//         console.log('____________');
-//         console.log(err);
-//         console.log('____________')
-//         }
-// })
 
-// const path = require('path');
-//
-// let s = path.join(__dirname, 'movies', 'xx', 'test', 'zz.mp4');
-//
-// console.log(s);
