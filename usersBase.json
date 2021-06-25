@@ -1,7 +1,1 @@
-[
-  {"name": "Volodya", "age": 21,"password":123},
-  {"name": "Svitlana", "age": 17, "password": 465},
-  {"name": "Sofia", "age": 34, "password": 234},
-  {"name": "Dmytro", "age": 26, "password": 321},
-  {"name": "Anton", "age": 22, "password": 987}
-]
+[{"name":"Volodya","email":"vova.ws@gmail.com","password":123},{"name":"Svitlana","email":"sveta.as@gmail.com","password":465},{"name":"Sofia","email":"sofa.rg@gmail.com","password":234},{"name":"Dmytro","email":"dima.hj@gmail.com","password":321},{"name":"Anton","email":"toha.yu@gmail.com","password":987},{"name":"Sasha","email":"sasha.er@gmail.com","password":"23454"},{"name":"Stas","email":"stas.lx@gmail.com","password":"wegerg"}]
